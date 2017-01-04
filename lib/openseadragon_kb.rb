@@ -1,5 +1,5 @@
 require "openseadragon_kb/version"
+require "openseadragon_kb/engine"
 
-module OpenseadragonKb
-  # Your code goes here...
+module Openseadragon_kb
 end
