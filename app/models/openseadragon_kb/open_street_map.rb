@@ -1,4 +1,4 @@
-module Openseadragon
+module OpenseadragonKb
   class OpenStreetMap
     def initialize(attributes = {})
     end

@@ -1,4 +1,4 @@
-module Openseadragon
+module OpenseadragonKb
   module OpenseadragonHelper
     ##
     # Generate a <picture> tag containing the given sources.
@@ -51,7 +51,7 @@ module Openseadragon
       tile_sources = sources.map { |thing| extract_openseadragon_picture_tilesource(thing) }
       
       picture_options[:data] ||= {}
-      picture_options[:data][:openseadragon_kb] = osd_asset_defaults.merge(picture_options[:data][:openseadragon_kb] || {}).to_json
+      picture_options[:data][:openseadragon] = osd_asset_defaults.merge(picture_options[:data][:openseadragon] || {}).to_json
 
       picture_tag [tile_sources], { media: 'openseadragon' }.merge(source_options), picture_options
     end
@@ -78,13 +78,13 @@ module Openseadragon
       if thing.respond_to? :to_tilesource
         html_options ||= {}
         html_options[:data] ||= {}
-        html_options[:data][:openseadragon_kb] ||= {}
+        html_options[:data][:openseadragon] ||= {}
         
         tilesource = thing.to_tilesource
         src = "openseadragon-tilesource"
         
         if tilesource.is_a? Hash
-          html_options[:data][:openseadragon_kb].merge! tilesource
+          html_options[:data][:openseadragon].merge! tilesource
         else
           src = tilesource
         end
@@ -97,7 +97,7 @@ module Openseadragon
         html_options.merge! src_options.fetch(:html, {})
         html_options[:data] ||= {}
         
-        osd_options = html_options[:data][:openseadragon_kb] || {}
+        osd_options = html_options[:data][:openseadragon] || {}
         osd_options.merge!(src_options.except(:html))
 
         if src.respond_to? :to_tilesource
@@ -111,7 +111,7 @@ module Openseadragon
           end
         end
         
-        html_options[:data][:openseadragon_kb] = osd_options.to_json
+        html_options[:data][:openseadragon] = osd_options.to_json
         
         [ html_options.fetch(:src, src) => html_options ]
       else # string

@@ -1,4 +1,4 @@
-module Openseadragon 
+module OpenseadragonKb
   class Engine < ::Rails::Engine
     isolate_namespace Openseadragon
 

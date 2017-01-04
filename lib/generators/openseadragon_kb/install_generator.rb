@@ -1,6 +1,6 @@
 require 'rails/generators'
 
-module Openseadragon
+module OpenseadragonKb
   class Install < Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
     

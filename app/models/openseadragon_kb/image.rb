@@ -1,4 +1,4 @@
-module Openseadragon
+module OpenseadragonKb
   class Image
     attr_accessor :id, :width, :height
 
