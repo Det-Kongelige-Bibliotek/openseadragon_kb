@@ -10,8 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["poma@kb.dk"]
 
   spec.summary       = %q{A special version of OpenSeaDragon for Det Kgl. Bibliotek.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/Det-Kongelige-Bibliotek/openseadragon_kb"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
