@@ -43,7 +43,7 @@ module Openseadragon
     # @param sources [Array<String>, Array<Hash>]
     # @param source_tag_options [Hash]
     # @param picture_tag_options [Hash]
-    def openseadragon_picture_tag(*sources)
+    def openseadragon_kb_picture_tag(*sources)
       picture_options = sources.extract_options!.symbolize_keys
       source_options = sources.extract_options!.symbolize_keys
       sources.flatten!
